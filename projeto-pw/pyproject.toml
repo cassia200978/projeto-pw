@@ -1,0 +1,34 @@
+[project]
+name = "projeto-pw"
+version = "0.1.0"
+description =  "Sistema para organizar compromissos e rotinas de autocuidado feminino"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "fastapi[standard]",
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+httpx = "*"
+ruff = "*"
+typos = "*"
+
+[tool.ruff]
+line-length = 79
+extend-exclude = ["migrations"]
+
+[tool.ruff.lint]
+select = ["I", "F", "E", "W", "PL", "PT"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["teste"]
+
+[tool.typos.files]
+extend-exclude = ["*.md", "migrations"]
