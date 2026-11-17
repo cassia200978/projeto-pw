@@ -32,3 +32,8 @@ testpaths = ["teste"]
 
 [tool.typos.files]
 extend-exclude = ["*.md", "migrations"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
